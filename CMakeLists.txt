@@ -4,6 +4,7 @@
 project(tinyobjloader)
 cmake_minimum_required(VERSION 2.8.6)
 
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 #Folder Shortcuts
 set(TINYOBJLOADEREXAMPLES_DIR ${CMAKE_CURRENT_SOURCE_DIR}/examples)
 
@@ -25,7 +26,6 @@ set(tinyobjloader-examples-objsticher
 add_library(tinyobjloader
 			${tinyobjloader-Source}
 	)
-
 option(TINYOBJLOADER_BUILD_TEST_LOADER "Build Test Loader Application" OFF)
 
 if(TINYOBJLOADER_BUILD_TEST_LOADER)
